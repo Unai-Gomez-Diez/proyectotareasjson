@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  crossorigin="anonymous">
+
+<div *ngIf="datosJson">
+  <br>
+  <div class="list-group list-group-numbered">
+    <button *ngFor="let tarea of datosJson" type="button"
+      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+      style="width: 50%" (click)="obtenerDatoJson(tarea.id)">
+      <span>{{ tarea.texto }}</span>
+      <img src="../../../assets/imagen/edit-2.svg" style="max-width: 50px; max-height: 50px;" />
+    </button>
+  </div>
+  <div *ngIf="datoSeleccionado">
+    <br>
+
+    <button type="button"
+      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+      <span>{{ datoSeleccionado.texto }}</span>
+      <img src="../../../assets/imagen/edit-2.svg" style="max-width: 50px; max-height: 50px;" />
+    </button>
+
+  </div>
+</div>

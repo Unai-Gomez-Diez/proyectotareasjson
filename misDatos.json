@@ -1,0 +1,30 @@
+{
+  "tareas": [
+    {
+      "id": 2,
+      "texto": "Preparar presentación Angular",
+      "fecha": "26/11/2021",
+      "hora": "08:00",
+      "recordatorio": true
+    },
+    {
+      "id": 3,
+      "texto": "Preparar presentación Angular",
+      "fecha": "26/11/2021",
+      "hora": "08:00",
+      "recordatorio": false
+    },
+    {
+      "texto": "Preparar presentación Angular",
+      "fecha": "26/11/2021",
+      "recordatorio": true,
+      "id": 4
+    },
+    {
+      "texto": "Preparar presentación Angular",
+      "fecha": "26/11/2021",
+      "recordatorio": true,
+      "id": 5
+    }
+  ]
+}
