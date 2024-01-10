@@ -4,15 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { BodyComponent } from './componentes/body/body.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddTutorialComponent } from './componentes/add-tutorial/add-tutorial.component';
+import { TutorialDetailsComponent } from './componentes/tutorial-details/tutorial-details.component';
+import { TutorialListComponent } from './componentes/tutorial-list/tutorial-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BodyComponent
+    AddTutorialComponent,
+    TutorialDetailsComponent,
+    TutorialListComponent
   ],
   imports: [
     BrowserModule,

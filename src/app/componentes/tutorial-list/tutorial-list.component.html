@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  crossorigin="anonymous">
+
+<h1>Lista de tareas</h1>
+<br>
+<div class="list-group list-group-numbered">
+  <button *ngFor="let tarea of datosJson" type="button"
+    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+    (click)="seleccionarDato(tarea.id)">
+    <span>{{ tarea.texto }}</span>
+    <img src="../../../assets/imagen/edit-2.svg" style="max-width: 50px; max-height: 50px;" />
+  </button>
+</div>
