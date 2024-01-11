@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Tutorial } from 'src/app/models/tutorial';
+import { Component, OnInit } from '@angular/core';
+import { Tutorial } from 'src/app/models/tutorial'
+import { JsonServiceService } from 'src/app/json-service.service';
 
 @Component({
   selector: 'app-tutorial-details',
@@ -7,9 +8,15 @@ import { Tutorial } from 'src/app/models/tutorial';
   styleUrls: ['./tutorial-details.component.css']
 })
 export class TutorialDetailsComponent implements OnInit {
-  @Input() datoSeleccionado: Tutorial | null = null;
+  datoSeleccionado: Tutorial | null = null;
+
+  constructor(private jsonService: JsonServiceService) { }
 
   ngOnInit(): void {
-    console.log('TutorialDetailsComponent initialized with datoSeleccionado:', this.datoSeleccionado?.texto);
+    // Suscríbete al Observable del servicio para recibir los datos transferidos
+    this.jsonService.obtenerDatosTransferidos().subscribe(dato => {
+      this.datoSeleccionado = dato;
+      // Haz algo con los datos recibidos
+    });
   }
 }
