@@ -19,4 +19,10 @@ export class TutorialDetailsComponent implements OnInit {
       // Haz algo con los datos recibidos
     });
   }
+
+  seleccionarDato() {
+    let dato = this.datoSeleccionado
+    this.jsonService.transferirDatos(dato);
+
+  }
 }
