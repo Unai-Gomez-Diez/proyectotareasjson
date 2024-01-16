@@ -1,13 +1,12 @@
 <div style="display: flex; flex-direction: column; align-items: flex-end;">
-  <h1>Tarea</h1>
+
   <div *ngIf="datoSeleccionado">
+    <h1>Tarea</h1>
     <br>
-    <span>{{ datoSeleccionado.id }}</span>
     <span>{{ datoSeleccionado.texto }}</span>
+    <br>
     <span>{{ datoSeleccionado.fecha }}</span>
-    <span>{{ datoSeleccionado.hora }}</span>
+    <br>
     <span>{{ datoSeleccionado.recordatorio }}</span>
-
-
   </div>
 </div>
